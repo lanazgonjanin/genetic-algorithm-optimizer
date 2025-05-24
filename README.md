@@ -19,10 +19,10 @@ They are based on the biological processes of evolution and natural selection.
 
 ## How to run
 
-1. Download all of the files into a single directory.
-2. Open the `GA.c` and `OF.c` files in VS Code (or any text editor or IDE).
-   - You will need to comment/uncomment code in these files depending on which function you want to optimize.
-   - Once your changes are made, continue with the steps below.
+1. Download all of the files into a single directory
+2. Open the `GA.c` and `OF.c` files in VS Code (or any text editor or IDE)
+   - You will need to comment/uncomment code in these files depending on which function you want to optimize
+   - Once your changes are made, continue with the steps below
 3. To compile, run the command:
    ```bash
    make
