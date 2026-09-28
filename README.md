@@ -1,37 +1,85 @@
 # Genetic Algorithm Optimizer
 
-This program implements a genetic algorithm to minimize multivariable functions.  
-The ten functions supported by this program are:
+A C implementation of a genetic algorithm for minimizing multivariable objective functions.
 
-- Griewank  
-- Levy  
-- Rastrigin  
-- Schwefel  
-- Trid  
-- Dixon-Price  
-- Rosenbrock  
-- Michalewicz (with m = 10)  
-- Powell  
-- Styblinski–Tang
+The program supports ten standard optimization benchmark functions and allows key genetic algorithm parameters to be configured through command-line arguments.
 
-Genetic algorithms are a well-known optimization technique used to find values at which a function is minimized. 
-They are based on the biological processes of evolution and natural selection.
+## Features
 
-## How to run
+* Genetic algorithm for multivariable function optimization
+* Ten standard optimization benchmark functions
+* Configurable population size
+* Configurable maximum number of generations
+* Configurable crossover and mutation rates
+* Configurable stopping criterion
+* Makefile-based compilation and cleanup
 
-1. Download all of the files into a single directory
-2. Open the `GA.c` and `OF.c` files in VS Code (or any text editor or IDE)
-   - You will need to comment/uncomment code in these files depending on which function you want to optimize
-   - Once your changes are made, continue with the steps below
-3. To compile, run the command:
-   ```bash
-   make
-   ```
-4. To run the algorithm, run (replacing the angle brackets with your chosen values):
-  ```bash
-  ./GA <POPULATION_SIZE> <MAX_GENERATIONS> <crossover_rate> <mutate_rate> <stop_criteria>
-  ```
-5. To remove the executable from the directory, run:
-   ```bash
-   make clean
-   ```
+## Optimization Functions
+
+* Griewank
+* Levy
+* Rastrigin
+* Schwefel
+* Trid
+* Dixon-Price
+* Rosenbrock
+* Michalewicz (`m = 10`)
+* Powell
+* Styblinski-Tang
+
+## Technologies
+
+* **Language:** C
+* **Build System:** Make
+* **Libraries & APIs:** `stdio`, `stdlib`, `time`, `float`, `math`
+
+## How to Run
+
+### Requirements
+
+* GCC
+* Make
+* A Unix-based terminal environment such as macOS or Linux
+
+### 1. Select the objective function
+
+The objective functions are defined in `OF.c`. Modify the relevant code in `GA.c` and `OF.c` to select the function you want to optimize.
+
+### 2. Compile the program
+
+```bash
+make
+```
+
+### 3. Run the algorithm
+
+```bash
+./GA <POPULATION_SIZE> <MAX_GENERATIONS> <crossover_rate> <mutate_rate> <stop_criteria>
+```
+
+| Argument          | Description                              |
+| ----------------- | ---------------------------------------- |
+| `POPULATION_SIZE` | Number of individuals in the population  |
+| `MAX_GENERATIONS` | Maximum number of generations            |
+| `crossover_rate`  | Probability of crossover                 |
+| `mutate_rate`     | Probability of mutation                  |
+| `stop_criteria`   | Criterion used to determine when to stop |
+
+### 4. Clean the build
+
+```bash
+make clean
+```
+
+## Technical Concepts
+
+* Genetic algorithms
+* Population-based optimization
+* Selection
+* Crossover
+* Mutation
+* Objective functions
+* Stopping criteria
+* Multivariable optimization
+* Modular C programming
+* Makefiles and build automation
